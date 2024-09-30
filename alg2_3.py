@@ -31,3 +31,28 @@ def Ferm(n):
     return list((p,q))
 
 n = 19691
+a=[]
+c=[]
+b = Ferm(n)
+a.append(b[0])
+a.append(b[1])
+SimpleNumber=SimpleNumbers(n)
+while True:
+    counter=0
+    for i in a:
+        if i in SimpleNumber or i==1:
+            counter+=1
+    if counter==len(a):
+        break
+    for i in a:
+        b = Ferm(i)
+        c.append(b[0])
+        c.append(b[1])
+    a=[]
+    for i in c:
+        a.append(i)
+    c=[]
+
+for i in a:
+    if i!=1:
+        print(i)
