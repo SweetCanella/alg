@@ -15,6 +15,6 @@ def poldel(a,b):
 a = int(input())
 b = int(input())
 if b == 0:
-    print('на нуль делить нельзя')
+    print('на ноль делить нельзя')
 else:
     print(poldel(a,b))
