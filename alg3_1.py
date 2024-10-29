@@ -1,3 +1,12 @@
+def maxi(a,b):
+    for i in a:
+        for j in b:
+            if i == j:
+                continue
+            if i > j:
+                return a
+            return b
+
 def plus(a,b):
     s=''
     c=0
@@ -24,8 +33,6 @@ def minus(max,min):
             s = str(x) + s
     return s
 
-
-
 a = list(str(input()))
 p = str(input())
 b = list(str(input()))
@@ -34,14 +41,13 @@ while len(a) != len(b):
         b.insert(0,'0')
     else:
         a.insert(0,'0')
-max = a
-min = b
-if int(''.join(a))<int(''.join(b)):
-    max = b
+max = maxi(a,b)
+if max == a:
+    min = b
+else:
     min = a
+print(maxi(a,b))
 if p == '+':
     print(plus(a,b))
 if p == '-':
     print(minus(max,min))
-else:
-    print('не тот символ бро')
