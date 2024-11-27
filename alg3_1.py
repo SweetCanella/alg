@@ -46,7 +46,6 @@ if max == a:
     min = b
 else:
     min = a
-print(maxi(a,b))
 if p == '+':
     print(plus(a,b))
 if p == '-':
