@@ -30,7 +30,7 @@ def Ferm(n):
     q = int(a-b)
     return list((p,q))
 
-n = 19691
+n = int(input())
 a=[]
 c=[]
 b = Ferm(n)
